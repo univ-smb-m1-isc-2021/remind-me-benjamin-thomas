@@ -1,53 +1,53 @@
 @startmindmap
-+ RemindME
++[#lightblue] RemindME
 ++ HomePage
 +++ Displayed for connected users only
-++++ Check for session var (cookie)
-++++ Check for the current google account
+++++[#Orange] Check for session var (cookie)
+++++[#Orange] Check for the current google account
 +++ Show incoming notifications (ordered by time left)
-++++ Sync the local memory with the remote one associated to the logged account
+++++[#Orange] Sync the local memory with the remote one associated to the logged account
 +++ Parameters
 ++++ Languages
-+++++ FULL LOCAL
-++++++ Stored in cookie or env var
-+++++ REMOTE
-++++++ Stored in DB - Table User Preferences
++++++[#Orange] FULL LOCAL
+++++++[#Orange] Stored in cookie or env var
++++++[#Orange] REMOTE
+++++++[#Orange] Stored in DB - Table User Preferences
 ++++ Dark Mode
-+++++ FULL LOCAL
-++++++ Stored in cookie or env var
-+++++ REMOTE
-++++++ Stored in DB - Table User Preferences
-++++ Pemissions
-+++++ Asked for each devices
-++++++ Notification
-++++++ Access to local files
-++++++ STORED BY USER'S PHONE/BROWSER
-++++++ ...
-+++++ Asked once for the entire account
-++++++ RGPD
-++++++ STORED DB
++++++[#Orange] FULL LOCAL
+++++++[#Orange] Stored in cookie or env var
++++++[#Orange] REMOTE
+++++++[#Orange] Stored in DB - Table User Preferences
+++++ Permissions
++++++[#Orange] Asked for each devices
+++++++[#Orange] Notification
+++++++[#Orange] Access to local files
+++++++[#Orange] STORED BY USER'S PHONE/BROWSER
+++++++[#Orange] ...
++++++[#Orange] Asked once for the entire account
+++++++[#Orange] RGPD
+++++++[#Orange] STORED DB
 ++++ Notification canals managment
-+++++ Table canal
-++++++ userid
-++++++ type
-++++++ canal_data
++++++[#Orange] Table canal
+++++++[#Orange] userid
+++++++[#Orange] type
+++++++[#Orange] canal_data
 ++++ Account managment
-+++++ Edit
-++++++ password
-++++++ name
-++++++ mail
-++++++ phone number
-++++++ accessible only for non social accounts
++++++[#Orange] Edit
+++++++[#Orange] password
+++++++[#Orange] name
+++++++[#Orange] mail
+++++++[#Orange] phone number
+++++++[#Orange] accessible only for non social accounts
 ++++ Third app link managment
 +++++ Google Contacts
 +++++ Facebook
 +++++ Phone contacts
-+++++ Add/Edit/Remove
++++++[#Orange] Add/Edit/Remove
 ++ Notification viewer
-+++ Spec
-++++ Event id
-++++ Timestamp
-++++ Activated
++++[#Orange] Spec
+++++[#Orange] Event id
+++++[#Orange] Timestamp
+++++[#Orange] Activated
 +++ Edit
 +++ Calendar View
 +++ Validate notification
@@ -62,11 +62,11 @@
 ---- Phone
 ---- Email
 -- Create Event
---- Spec
----- Self id
----- User id
----- Name
----- Date
----- Notification number
----- First notification before ...
+---[#Orange] Spec
+----[#Orange] Self id
+----[#Orange] User id
+----[#Orange] Name
+----[#Orange] Date
+----[#Orange] Notification number
+----[#Orange] First notification before ...
 @endmindmap
