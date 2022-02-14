@@ -44,6 +44,10 @@
 +++++ Phone contacts
 +++++ Add/Edit/Remove
 ++ Notification viewer
++++ Spec
+++++ Event id
+++++ Timestamp
+++++ Activated
 +++ Edit
 +++ Calendar View
 +++ Validate notification
@@ -58,7 +62,11 @@
 ---- Phone
 ---- Email
 -- Create Event
---- Date
---- Name
---- Priority
+--- Spec
+---- Self id
+---- User id
+---- Name
+---- Date
+---- Notification number
+---- First notification before ...
 @endmindmap
