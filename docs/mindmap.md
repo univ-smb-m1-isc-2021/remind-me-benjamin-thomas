@@ -39,6 +39,10 @@
 ++++++ phone number
 ++++++ accessible only for non social accounts
 ++++ Third app link managment
++++++ Google Contacts
++++++ Facebook
++++++ Phone contacts
++++++ Add/Edit/Remove
 ++ Notification viewer
 +++ Edit
 +++ Calendar View
