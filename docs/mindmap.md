@@ -6,7 +6,7 @@
 ++++ Check for the current google account
 +++ Show incoming notifications (ordered by time left)
 ++++ Sync the local memory with the remote one associated to the logged account
-+++ Parameters :
++++ Parameters
 ++++ Languages
 +++++ FULL LOCAL
 ++++++ Stored in cookie or env var
@@ -27,7 +27,17 @@
 ++++++ RGPD
 ++++++ STORED DB
 ++++ Notification canals managment
++++++ Table canal
+++++++ userid
+++++++ type
+++++++ canal_data
 ++++ Account managment
++++++ Edit
+++++++ password
+++++++ name
+++++++ mail
+++++++ phone number
+++++++ accessible only for non social accounts
 ++++ Third app link managment
 ++ Notification viewer
 +++ Edit
