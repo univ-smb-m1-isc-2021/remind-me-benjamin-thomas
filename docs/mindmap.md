@@ -17,7 +17,7 @@
 ++++++[#Orange] Stored in cookie or env var
 +++++[#Orange] REMOTE
 ++++++[#Orange] Stored in DB - Table User Preferences
-++++ Permissions
+++++[#lightgreen] Permissions
 +++++[#Orange] Asked for each devices
 ++++++[#Orange] Notification
 ++++++[#Orange] Access to local files
@@ -26,19 +26,19 @@
 +++++[#Orange] Asked once for the entire account
 ++++++[#Orange] RGPD
 ++++++[#Orange] STORED DB
-++++ Notification canals managment
+++++[#lightgreen] Notification canals managment
 +++++[#Orange] Table canal
 ++++++[#Orange] userid
 ++++++[#Orange] type
 ++++++[#Orange] canal_data
-++++ Account managment
+++++[#lightgreen] Account managment
 +++++[#Orange] Edit
 ++++++[#Orange] password
 ++++++[#Orange] name
 ++++++[#Orange] mail
 ++++++[#Orange] phone number
 ++++++[#Orange] accessible only for non social accounts
-++++ Third app link managment
+++++[#lightgreen] Third app link managment
 +++++ Google Contacts
 +++++ Facebook
 +++++ Phone contacts
