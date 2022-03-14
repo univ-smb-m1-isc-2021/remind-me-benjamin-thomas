@@ -1,12 +1,12 @@
 @startmindmap
 +[#lightblue] RemindME
-++ HomePage
+++[#lightgreen] HomePage
 +++ Displayed for connected users only
 ++++[#Orange] Check for session var (cookie)
 ++++[#Orange] Check for the current google account
 +++ Show incoming notifications (ordered by time left)
 ++++[#Orange] Sync the local memory with the remote one associated to the logged account
-+++ Parameters
++++[#lightgreen] Parameters
 ++++ Languages
 +++++[#Orange] FULL LOCAL
 ++++++[#Orange] Stored in cookie or env var
@@ -43,7 +43,7 @@
 +++++ Facebook
 +++++ Phone contacts
 +++++[#Orange] Add/Edit/Remove
-++ Notification viewer
+++[#lightgreen] Notification viewer
 +++[#Orange] Spec
 ++++[#Orange] Event id
 ++++[#Orange] Timestamp
@@ -51,17 +51,17 @@
 +++ Edit
 +++ Calendar View
 +++ Validate notification
--- Connection Page
+--[#lightgreen] Connection Page
 --- Connection methods
 ---- Google
 ---- Phone
 ---- Email
--- Creation Page
+--[#lightgreen] Creation Page
 --- Creation methods
 ---- Google
 ---- Phone
 ---- Email
--- Create Event
+--[#lightgreen] Create Event
 ---[#Orange] Spec
 ----[#Orange] Self id
 ----[#Orange] User id
