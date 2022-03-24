@@ -9,7 +9,7 @@ class App extends Component {
         this.state = {
             result: []
         }
-
+        this.sceneRef = React.createRef();
     }
 
     componentWillMount() {
@@ -20,12 +20,22 @@ class App extends Component {
             });
     }
 
+    onClickFloppa(event){
+        console.log("floppa");
+    }
+
+    onClickSogga(event){
+        console.log("sogga");
+    }
+
     render() {
         return (
-            <BoardWrapper>
-                {this.state.result.map(jobResult => <Panel jobResult={jobResult}/>)}
-            </BoardWrapper>
-
+            <div>
+                <div><div onClick={(event) => this.onClickFloppa(event)}>Hello Floppa</div><div onClick={(event) => this.onClickSogga(event)}>Hello Sogga</div></div>
+                <div ref={this.sceneRef}>
+                    ...
+                </div>
+            </div>
         );
     }
 }
