@@ -15,11 +15,9 @@ class Home extends Component {
 
     render() {
         return (
-            <View>
-                <p>
-                    Hello home;
-                </p>
-            </View>
+            <div>
+                Hello home
+            </div>
         );
     }
 }

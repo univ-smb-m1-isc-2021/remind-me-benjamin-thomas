@@ -1,8 +1,7 @@
 import React, {Component} from "react";
-import Panel from "./components/Panel";
-import BoardWrapper from "./components/BoardWrapper";
 import Navbar from "./components/Navbar";
 import Route from "./components/Route";
+import Home from "./components/Home";
 
 class App extends Component {
 
@@ -26,6 +25,7 @@ class App extends Component {
         return (
             <div>
                 <Navbar/>
+                <Route/>
             </div>
         );
     }

@@ -15,11 +15,9 @@ class CreateEvent extends Component {
 
     render() {
         return (
-            <View>
-                <p>
-                    Hello event;
-                </p>
-            </View>
+            <div>
+                Hello event
+            </div>
         );
     }
 }

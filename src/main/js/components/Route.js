@@ -10,11 +10,7 @@ class Route extends Component {
             result: []
         }
         this.sceneRef = React.createRef();
-    }
-
-    componentDidMount() {
-        const { location } = this.props;
-        this.state.path = new URLSearchParams(location.pathname);
+        this.path = this.props.location.pathname;
         this.routes = {
             "/react" : <Home/>,
             "/react/createEvent" : <CreateEvent/>,
@@ -23,9 +19,9 @@ class Route extends Component {
 
     render() {
         return (
-            <View>
-                {this.routes[this.path]}
-            </View>
+            <div>
+                {this.routes["/react"]}
+            </div>
         );
     }
 }
