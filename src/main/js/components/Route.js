@@ -24,9 +24,7 @@ class Route extends Component {
     render() {
         return (
             <View>
-                <p>
-                    Bonjour
-                </p>
+                {this.routes[this.path]}
             </View>
         );
     }
