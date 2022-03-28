@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import Panel from "./components/Panel";
 import BoardWrapper from "./components/BoardWrapper";
+import Navbar from "./components/Navbar";
+import Route from "./components/Route";
 
 class App extends Component {
 
@@ -20,21 +22,10 @@ class App extends Component {
             });
     }
 
-    onClickFloppa(event){
-        console.log("floppa");
-    }
-
-    onClickSogga(event){
-        console.log("sogga");
-    }
-
     render() {
         return (
             <div>
-                <div><div onClick={(event) => this.onClickFloppa(event)}>Hello Floppa</div><div onClick={(event) => this.onClickSogga(event)}>Hello Sogga</div></div>
-                <div ref={this.sceneRef}>
-                    ...
-                </div>
+                <Navbar/>
             </div>
         );
     }
