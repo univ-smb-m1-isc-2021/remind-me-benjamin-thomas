@@ -11,20 +11,20 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>me.guillaume</groupId>
-    <artifactId>chuck-facts</artifactId>
+    <groupId>remind-me-benjamin-thomas</groupId>
+    <artifactId>remind-me-benjamin-thomas</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>chuck-facts</name>
+    <name>remind-me-benjamin-thomas</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <prometheus.version>0.15.0</prometheus.version>
-        <sonar.projectKey>gjambet_chuck-facts</sonar.projectKey>
-        <sonar.organization>gjambet</sonar.organization>
+        <sonar.projectKey>remind-me-benjamin-thomas</sonar.projectKey>
+        <sonar.organization>univ-smb-m1-isc-2021</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
@@ -263,7 +263,7 @@
                                     <version>3.5</version>
                                 </requireMavenVersion>
                                 <requireJavaVersion>
-                                    <version>11</version>
+                                    <version>17</version>
                                 </requireJavaVersion>
                             </rules>
                         </configuration>
