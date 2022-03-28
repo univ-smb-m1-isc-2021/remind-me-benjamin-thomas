@@ -1,4 +1,4 @@
-FROM openjdk:17-jre-slim
+FROM openjdk:11-jre-slim
 
 COPY ./target/remind-me-benjamin-thomas-1.0-SNAPSHOT.jar .
 
