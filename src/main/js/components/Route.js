@@ -10,7 +10,7 @@ class Route extends Component {
             result: []
         }
         this.sceneRef = React.createRef();
-        this.path = this.props.location.pathname;
+        this.path = window.location.pathname;
         this.routes = {
             "/react" : <Home/>,
             "/react/createEvent" : <CreateEvent/>,
@@ -20,7 +20,7 @@ class Route extends Component {
     render() {
         return (
             <div>
-                {this.routes["/react"]}
+                {this.routes[this.path]}
             </div>
         );
     }
