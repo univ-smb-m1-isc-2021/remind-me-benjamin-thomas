@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import Navbar from "./components/Navbar";
 import Route from "./components/Route";
-import Home from "./components/Home";
 
 class App extends Component {
 

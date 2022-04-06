@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 
-class CreateEvent extends Component {
+class Settings extends Component {
 
     constructor(props) {
         super(props);
@@ -16,10 +16,10 @@ class CreateEvent extends Component {
     render() {
         return (
             <div>
-                Hello event
+                Hello Settings
             </div>
         );
     }
 }
 
-export default CreateEvent;
+export default Settings;

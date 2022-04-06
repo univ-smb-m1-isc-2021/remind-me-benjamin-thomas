@@ -1,6 +1,7 @@
 import React, {Component} from "react";
-import CreateEvent from "./CreateEvent";
+import Login from "./Login";
 import Home from "./Home";
+import Settings from "./Settings";
 
 class Route extends Component {
 
@@ -12,8 +13,9 @@ class Route extends Component {
         this.sceneRef = React.createRef();
         this.path = window.location.pathname;
         this.routes = {
-            "/react" : <Home/>,
-            "/react/createEvent" : <CreateEvent/>,
+            "/react/home" : <Home/>,
+            "/react/login" : <Login/>,
+            "/react/settings" : <Settings/>
         };
     }
 

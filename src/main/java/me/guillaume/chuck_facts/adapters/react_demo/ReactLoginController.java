@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-class ReactCreateEventController {
+class ReactLoginController {
 
-    @GetMapping("/react/createEvent")
+    @GetMapping("/react/login")
     public String renderMainPage() {
         return new InitialHtml("React Demo").serialize();
     }

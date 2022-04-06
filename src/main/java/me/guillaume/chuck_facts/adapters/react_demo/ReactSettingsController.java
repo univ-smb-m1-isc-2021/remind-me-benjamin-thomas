@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-class ReactHomeController {
+class ReactSettingsController {
 
-    @GetMapping("/react/home")
+    @GetMapping("/react/settings")
     public String renderMainPage() {
         return new InitialHtml("React Demo").serialize();
     }
