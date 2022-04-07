@@ -4,9 +4,11 @@ package me.guillaume.chuck_facts.infrastructure.persistence;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class User {
+@Table
+public class Users {
 
     @Id
     @GeneratedValue
@@ -16,11 +18,11 @@ public class User {
     private String password;
     private String email;
 
-    public User() {
+    public Users() {
         // JPA
     }
 
-    public User(String name, String password, String email) {
+    public Users(String name, String password, String email) {
         this.name = name;
         this.password = password;
         this.email = email;

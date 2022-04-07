@@ -8,18 +8,18 @@ import javax.annotation.PostConstruct;
 class Initializer {
 
     private final ChuckFactsRepository repository;
-    //private final UserRepository repositoryUser;
+    private final UsersRepository repositoryUsers;
 
-    public Initializer(ChuckFactsRepository repository/*UserRepository repositoryUser*/) {
+    public Initializer(ChuckFactsRepository repository, UsersRepository repositoryUsers) {
         this.repository = repository;
-        // this.repositoryUser = repositoryUser;
+        this.repositoryUsers = repositoryUsers;
     }
 
     @PostConstruct
     public void initialize() {
 
         repository.deleteAllInBatch();
-        //repositoryUser.deleteAllInBatch();
+        repositoryUsers.deleteAllInBatch();
 
         if (repository.findAll().isEmpty()) {
             repository.saveAndFlush(new ChuckFact("Chuck Norris can divide by zero."));
@@ -28,11 +28,11 @@ class Initializer {
             repository.saveAndFlush(new ChuckFact("When God said, “Let there be light!” Chuck said, “Say Please.”"));
         }
 
-        /*if(repositoryUser.findAll().isEmpty()) {
-            repositoryUser.saveAndFlush(new User("John Doe", "motDePasse", "john@caramail.fr"));
-            repositoryUser.saveAndFlush(new User("Jane Doe", "motDePasse", "jane@caramail.fr"));
-            repositoryUser.saveAndFlush(new User("Floppa", "nuclearFLOPP", "flopp@flopp.flopp"));
-        }*/
+        if(repositoryUsers.findAll().isEmpty()) {
+            repositoryUsers.saveAndFlush(new Users("John Doe", "motDePasse", "john@caramail.fr"));
+            repositoryUsers.saveAndFlush(new Users("Jane Doe", "motDePasse", "jane@caramail.fr"));
+            repositoryUsers.saveAndFlush(new Users("Floppa", "nuclearFLOPP", "flopp@flopp.flopp"));
+        }
     }
 
 }

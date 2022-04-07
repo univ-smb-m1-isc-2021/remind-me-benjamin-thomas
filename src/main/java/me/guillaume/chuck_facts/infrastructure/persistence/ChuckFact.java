@@ -4,8 +4,10 @@ package me.guillaume.chuck_facts.infrastructure.persistence;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table
 public class ChuckFact {
 
     @Id

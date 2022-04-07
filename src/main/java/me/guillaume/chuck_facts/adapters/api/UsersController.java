@@ -1,6 +1,6 @@
 package me.guillaume.chuck_facts.adapters.api;
 
-import me.guillaume.chuck_facts.application.UserService;
+import me.guillaume.chuck_facts.application.UsersService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,21 +12,21 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 
 @RestController
-public class UserController {
+public class UsersController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
-    private final UserService userService;
+    private final UsersService usersService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
+    public UsersController(UsersService usersService) {
+        this.usersService = usersService;
     }
 
 
-    @GetMapping(value = "/api/user")
+    @GetMapping(value = "/api/users")
     public List<String> facts() {
         logger.info("Serving Facts");
         List<String> toReturn =
-                userService.users()
+                usersService.users()
                 .stream()
                 .map(p -> String.valueOf(p.getName()))
                 .collect(toList());
