@@ -1,10 +1,8 @@
 package me.guillaume.chuck_facts.infrastructure.persistence;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
@@ -17,6 +15,9 @@ public class Users {
     private String name;
     private String password;
     private String email;
+
+    @OneToMany
+    private List<Notification> notifications;
 
     public Users() {
         // JPA
@@ -64,5 +65,13 @@ public class Users {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Notification> getNotifications() {
+        return notifications;
+    }
+
+    public void setNotifications(List<Notification> notifications) {
+        this.notifications = notifications;
     }
 }
