@@ -9,6 +9,6 @@ import java.util.Date;
 public interface NotificationRepository extends JpaRepository<Notification, Long> {
 
     Notification findById(long id);
-    Notification deleteById(long id);
+    void deleteById(long id);
     Notification findByDate(Date date);
 }
