@@ -18,7 +18,7 @@ class Navbar extends Component {
             <div>
                 <ul>
                     <li>
-                        <a href="/react">Home</a>
+                        <a href="/react/home">Home</a>
                     </li>
                     <li>
                         <a href="/react/createEvent">Create Event</a>

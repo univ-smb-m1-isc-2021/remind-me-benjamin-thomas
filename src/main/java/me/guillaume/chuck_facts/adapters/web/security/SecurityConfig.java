@@ -37,13 +37,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(final HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/admin/**").hasAuthority("ADMIN")
+                .antMatchers("/react/**").hasAuthority("ADMIN")
                 .anyRequest().permitAll()
                 .and()
                 .formLogin()
                 .loginPage("/login-form")
                 .loginProcessingUrl("/perform_login")
-                .defaultSuccessUrl("/admin", true)
+                .defaultSuccessUrl("/react/home", true)
                 .failureUrl("/");
     }
 

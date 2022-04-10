@@ -4,12 +4,11 @@ import me.guillaume.chuck_facts.infrastructure.persistence.Notification;
 import me.guillaume.chuck_facts.infrastructure.persistence.NotificationRepository;
 import me.guillaume.chuck_facts.infrastructure.persistence.Users;
 import me.guillaume.chuck_facts.infrastructure.persistence.UsersRepository;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.configurationprocessor.json.JSONArray;
-import org.springframework.boot.configurationprocessor.json.JSONException;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
@@ -30,7 +29,7 @@ public class NotificationController {
     NotificationRepository notificationService;
 
     @GetMapping(value = "/api/get_notification")
-    public String getNotification(HttpServletRequest request) throws JSONException {
+    public String getNotification(HttpServletRequest request) {
         logger.info("Serving Facts");
         Users temp = usersService.findByName(SecurityContextHolder.getContext().getAuthentication().getName());
         List<Notification> toReturn = temp.getNotifications();
@@ -81,7 +80,17 @@ public class NotificationController {
 
         temp.setNotifications(toReturn);
         usersService.saveAndFlush(temp);
-        return "Ok";
+
+        // Return new Notification
+        JSONObject one = new JSONObject();
+        one.put("id", newNotif.getId());
+        one.put("name", newNotif.getName());
+        one.put("description", newNotif.getDescription());
+        one.put("date", newNotif.getDate());
+        one.put("repeat", newNotif.getRepeatString());
+        one.put("frequence", String.valueOf(newNotif.getFrequence()));
+        String toReturnString = one.toString();
+        return toReturnString;
     }
 
     @GetMapping(value = "/api/modify_notification")
