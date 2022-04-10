@@ -19,6 +19,9 @@ public class Users {
     @OneToMany
     private List<Notification> notifications;
 
+    @OneToMany
+    private List<NotificationChannels> notificationChannels;
+
     public Users() {
         // JPA
     }
@@ -73,5 +76,13 @@ public class Users {
 
     public void setNotifications(List<Notification> notifications) {
         this.notifications = notifications;
+    }
+
+    public List<NotificationChannels> getNotificationChannels() {
+        return notificationChannels;
+    }
+
+    public void setNotificationChannels(List<NotificationChannels> notificationChannels) {
+        this.notificationChannels = notificationChannels;
     }
 }
