@@ -17,7 +17,7 @@ body {
   li{
     display: inline-block;
     border: 2px solid black;
-    border-radius: 2px;
+    border-radius: 3px;
     margin-right: 10px;
   }
 }
@@ -26,11 +26,21 @@ button{
   margin : 10%;
   background-color: $primary_color;
   border : none;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .content{
   margin-left: 5%;
   padding-left: 5%;
   border-left: 2px solid grey;
+}
+
+.notification{
+  border: 2px solid $primary_color;
+  border-radius: 3px;
+}
+
+.notificationAdd{
+  border: 2px solid black;
+  border-radius: 3px;
 }

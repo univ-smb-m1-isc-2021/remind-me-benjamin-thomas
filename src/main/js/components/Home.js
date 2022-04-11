@@ -53,9 +53,9 @@ class Home extends Component {
     render() {
         return (
             <div>
-                {this.state.notifications.map(item => <div id={"card_" + item["id"]}><p>Nom : {item["name"]}<br/>Description : {item["description"]}<br/>Date : {item["date"]}<br/>Repetition : {item["repeat"]}<br/>Fréquence de repetition : {item["frequence"]}<br/><button onClick={() => this.deleteNotification(item["id"])}>Supprimer</button></p></div>)}
+                {this.state.notifications.map(item => <div className="notification" id={"card_" + item["id"]}><p>Nom : {item["name"]}<br/>Description : {item["description"]}<br/>Date : {item["date"]}<br/>Repetition : {item["repeat"]}<br/>Fréquence de repetition : {item["frequence"]}<br/><button onClick={() => this.deleteNotification(item["id"])}>Supprimer</button></p></div>)}
                 <hr/>
-                <div>
+                <div className="notificationAdd">
                     Nom : <input id="name" type="text"/><br/>
                     Description : <input id="description" type="text"/><br/>
                     Date : <input id="date" type="date"/><br/>
