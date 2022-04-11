@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 public class SimpleEmailExampleController {
@@ -59,6 +60,26 @@ public class SimpleEmailExampleController {
                 for(NotificationChannels tempChannel : listChannel){
                     if(tempNotif.getDate().equals(currentDate)){
                         sendEmail(tempChannel.getDestination(), tempNotif.getName(), tempNotif.getDescription());
+                    }
+                }
+            }
+        }
+
+        for(Users temp: listUser){
+            List<NotificationChannels> listChannel = temp.getNotificationChannels();
+            List<Notification> listNotification = temp.getNotifications();
+
+            for(Notification tempNotif: listNotification){
+                for(NotificationChannels tempChannel : listChannel){
+                    if(tempNotif.getDate().equals(currentDate)){
+                        if(tempNotif.isRepeat()){
+                            Date curDate = new Date();
+                            Date dayAfter = new Date(curDate.getTime() + TimeUnit.DAYS.toMillis( tempNotif.getFrequence() ));
+
+                            Notification e = notificationService.findById(Math.toIntExact(tempNotif.getId()));
+                            e.setDate(dayAfter);
+                            notificationService.saveAndFlush(e);
+                        }
                     }
                 }
             }
