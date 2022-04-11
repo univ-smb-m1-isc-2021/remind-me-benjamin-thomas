@@ -21,7 +21,7 @@ class Navbar extends Component {
                         <a href="/react/home">Home</a>
                     </li>
                     <li>
-                        <a href="/react/settings">Create Event</a>
+                        <a href="/react/settings">Manage Channels</a>
                     </li>
                 </ul>
             </div>

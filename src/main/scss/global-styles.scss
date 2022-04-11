@@ -2,10 +2,10 @@ $font_stack: Arial_black, sans-serif;
 $primary_color: #3385ff;
 
 body {
-  margin: 0;
+  margin-top: 5%;
   padding: 0;
   font: $font_stack;
-  background-image: linear-gradient(to bottom right, white, $primary_color);
+  background-image: linear-gradient(to bottom right, white, white, white, $primary_color);
 }
 
 #navBar{
@@ -30,5 +30,7 @@ button{
 }
 
 .content{
-  padding-left: 10%;
+  margin-left: 5%;
+  padding-left: 5%;
+  border-left: 2px solid grey;
 }
