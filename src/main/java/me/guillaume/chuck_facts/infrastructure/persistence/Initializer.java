@@ -54,12 +54,13 @@ class Initializer {
         if (repositoryChannel.findAll().isEmpty()){
             repositoryChannel.saveAndFlush(new NotificationChannels("floppa mail", "mail", "tyazze@gmail.com"));
             repositoryChannel.saveAndFlush(new NotificationChannels("secondary floppa mail", "mail", "thomas0bellon@gmail.com"));
+            repositoryChannel.saveAndFlush(new NotificationChannels("third floppa mail", "mail", "other@nakashita.fr"));
         }
 
         if(repositoryUsers.findAll().isEmpty()) {
-            repositoryUsers.saveAndFlush(new Users("John Doe", "motDePasse", "john@caramail.fr"));
+            repositoryUsers.saveAndFlush(new Users("John Doe", "motDePasse", "tyazze@gmail.com"));
             repositoryUsers.saveAndFlush(new Users("Jane Doe", "motDePasse", "jane@caramail.fr"));
-            repositoryUsers.saveAndFlush(new Users("Floppa", "nuclearFLOPP", "flopp@flopp.flopp"));
+            repositoryUsers.saveAndFlush(new Users("Floppa", "nuclearFLOPP", "thomas0bellon@gmail.com"));
 
             Users tmp = usersService.findByName("Floppa");
             tmp.setNotifications(notificationService.findAll());
