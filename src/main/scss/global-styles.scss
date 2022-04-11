@@ -8,12 +8,13 @@ body {
   padding: 0;
   font: $font_stack;
   background-image: linear-gradient(to bottom right, white, $secondary_color);
+  height: 100%;
 }
 
 #navBar{
   ul{
     margin: 0;
-    padding-top: 10px;
+    padding: 10px;
     background-color: $primary_color;
   }
   li{
@@ -38,6 +39,7 @@ button{
 }
 
 .notification{
+  padding-left: 5px;
   border: 2px solid $primary_color;
   border-radius: 3px;
   margin-top: 2%;
@@ -46,6 +48,7 @@ button{
 }
 
 .notificationAdd{
+  padding-left: 5px;
   border: 2px solid black;
   border-radius: 3px;
   margin-top: 5%;
@@ -53,8 +56,4 @@ button{
   display: flex;
 }
 
-#login{
-  border: 2px solid black;
-  border-radius: 3px;
-  background-color: $tertiary_color;
-}
+
