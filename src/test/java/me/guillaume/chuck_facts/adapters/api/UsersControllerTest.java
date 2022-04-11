@@ -26,13 +26,13 @@ class UsersControllerTest {
     }
 
     @Test
-    public void shouldPippoTwice() throws Exception {
+    public void shouldPippoOnce() throws Exception {
 
         when(usersService.users())
-                .thenReturn(of(new Users("pipo-1", "pipoMdp", "pipo@mail.com"), new Users("pipo-2", "pipoMdp2", "pipo2@mail.com")));
+                .thenReturn(of(new Users("pipo-1", "pipoMdp", "pipo@mail.com")));
 
         mockMvc.perform(get("/api/users"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("[\"pipo-1\",\"pipo-2\"]"));
+                .andExpect(content().string("[\"pipo-1\"]"));
     }
 }
