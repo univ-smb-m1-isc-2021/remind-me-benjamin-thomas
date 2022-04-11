@@ -55,7 +55,7 @@ class Home extends Component {
             <div>
                 {this.state.notifications.map(item => <div className="notification" id={"card_" + item["id"]}><p>Nom : {item["name"]}<br/>Description : {item["description"]}<br/>Date : {item["date"]}<br/>Repetition : {item["repeat"]}<br/>Fréquence de repetition : {item["frequence"]}<br/><button onClick={() => this.deleteNotification(item["id"])}>Supprimer</button></p></div>)}
                 <hr/>
-                <div id="notificationAdd">
+                <div className="notificationAdd">
                     Nom : <input id="name" type="text"/><br/>
                     Description : <input id="description" type="text"/><br/>
                     Date : <input id="date" type="date"/><br/>

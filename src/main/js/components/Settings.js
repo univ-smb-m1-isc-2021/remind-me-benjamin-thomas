@@ -48,7 +48,7 @@ class Settings extends Component {
             <div>
                 {this.state.notificationChannels.map(item => <div className="notification" id={"card_" + item["id"]}><p>Nom : {item["name"]}<br/>Type : {item["type"]}<br/>Destination : {item["destination"]}<br/><button onClick={() => this.deleteNotificationChannel(item["id"])}>Supprimer</button></p></div>)}
                 <hr/>
-                <div id="notificationAdd">
+                <div className="notificationAdd">
                     Nom : <input id="name" type="text"/><br/>
                     Type : <input id="type" type="text"/><br/>
                     Destination : <input id="destination" type="text"/><br/>
