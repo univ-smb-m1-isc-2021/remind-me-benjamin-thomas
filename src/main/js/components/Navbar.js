@@ -21,16 +21,7 @@ class Navbar extends Component {
                         <a href="/react/home">Home</a>
                     </li>
                     <li>
-                        <a href="/react/createEvent">Create Event</a>
-                    </li>
-                    <li>
-                        <a href="/react/reminders">My Reminders</a>
-                    </li>
-                    <li>
-                        <a href="/react/parameters">Parameters</a>
-                    </li>
-                    <li>
-                        <a href="/react/profile">Profile</a>
+                        <a href="/react/settings">Create Event</a>
                     </li>
                 </ul>
             </div>
