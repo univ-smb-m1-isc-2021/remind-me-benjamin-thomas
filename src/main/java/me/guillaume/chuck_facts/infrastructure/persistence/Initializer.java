@@ -46,15 +46,14 @@ class Initializer {
         }
 
         if(repositoryNotification.findAll().isEmpty()) {
-            repositoryNotification.saveAndFlush(new Notification("Wash the flopp", "wash the flopp with soap", new Date(), true, 0));
-            repositoryNotification.saveAndFlush(new Notification("Feed the flopp", "feed the flopp with cement", new Date(), true, 0));
-            repositoryNotification.saveAndFlush(new Notification("Pet the flopp", "pet the flopp with your hands (careful, he's aggressive)", new Date(), true, 0));
+            repositoryNotification.saveAndFlush(new Notification("Wash the flopp", "wash the flopp with soap", new Date(), true, 1));
+            repositoryNotification.saveAndFlush(new Notification("Feed the flopp", "feed the flopp with cement", new Date(), false, 0));
+            repositoryNotification.saveAndFlush(new Notification("Pet the flopp", "pet the flopp with your hands (careful, he's aggressive)", new Date(), true, 4));
         }
 
         if (repositoryChannel.findAll().isEmpty()){
             repositoryChannel.saveAndFlush(new NotificationChannels("floppa mail", "mail", "tyazze@gmail.com"));
             repositoryChannel.saveAndFlush(new NotificationChannels("secondary floppa mail", "mail", "thomas0bellon@gmail.com"));
-            repositoryChannel.saveAndFlush(new NotificationChannels("third floppa mail", "mail", "other@nakashita.fr"));
         }
 
         if(repositoryUsers.findAll().isEmpty()) {
