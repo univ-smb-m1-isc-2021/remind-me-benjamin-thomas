@@ -23,7 +23,7 @@ public class UsersController {
 
     @GetMapping(value = "/api/users")
     public String facts() {
-        logger.info("Serving Facts");
+        logger.info("Serving Users");
         Users temp = usersService.findByEmailAndPassword("flopp@flopp.flopp", "nuclearFLOPP");
         String toReturn = temp.getName();
         return toReturn;
