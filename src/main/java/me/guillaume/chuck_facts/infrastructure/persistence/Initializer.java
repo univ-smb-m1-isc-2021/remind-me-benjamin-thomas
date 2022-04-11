@@ -36,6 +36,7 @@ class Initializer {
         repository.deleteAllInBatch();
         repositoryUsers.deleteAllInBatch();
         repositoryNotification.deleteAllInBatch();
+        repositoryChannel.deleteAllInBatch();
 
         if (repository.findAll().isEmpty()) {
             repository.saveAndFlush(new ChuckFact("Chuck Norris can divide by zero."));
