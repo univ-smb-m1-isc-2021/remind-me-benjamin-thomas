@@ -15,7 +15,7 @@ class Navbar extends Component {
 
     render() {
         return (
-            <div id={"navBar"}>
+            <div id="navBar">
                 <ul>
                     <li>
                         <a href="/react/home">Home</a>

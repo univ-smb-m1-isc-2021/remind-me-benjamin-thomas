@@ -21,7 +21,7 @@ class Route extends Component {
 
     render() {
         return (
-            <div class={"content"}>
+            <div className="content">
                 {this.routes[this.path]}
             </div>
         );
