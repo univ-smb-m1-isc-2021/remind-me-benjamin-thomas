@@ -22,7 +22,12 @@ body {
 }
 
 button{
+  margin : 10%;
   background-color: $primary_color;
   border : none;
   border-radius: 2px;
+}
+
+.content{
+  padding-left: 10%;
 }
