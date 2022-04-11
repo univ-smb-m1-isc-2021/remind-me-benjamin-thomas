@@ -12,6 +12,7 @@ class Initializer {
     private final ChuckFactsRepository repository;
     private final UsersRepository repositoryUsers;
     private final NotificationRepository repositoryNotification;
+    private final NotificationChannelsRepository repositoryChannel;
 
     @Autowired
     UsersRepository usersService;
@@ -19,10 +20,14 @@ class Initializer {
     @Autowired
     NotificationRepository notificationService;
 
-    public Initializer(ChuckFactsRepository repository, UsersRepository repositoryUsers, NotificationRepository repositoryNotification) {
+    @Autowired
+    NotificationChannelsRepository channelService;
+
+    public Initializer(ChuckFactsRepository repository, UsersRepository repositoryUsers, NotificationRepository repositoryNotification, NotificationChannelsRepository repositoryChannel) {
         this.repository = repository;
         this.repositoryUsers = repositoryUsers;
         this.repositoryNotification = repositoryNotification;
+        this.repositoryChannel = repositoryChannel;
     }
 
     @PostConstruct
@@ -45,6 +50,11 @@ class Initializer {
             repositoryNotification.saveAndFlush(new Notification("Pet the flopp", "pet the flopp with your hands (careful, he's aggressive)", new Date(), true, 0));
         }
 
+        if (repositoryChannel.findAll().isEmpty()){
+            repositoryChannel.saveAndFlush(new NotificationChannels("floppa mail", "mail", "tyazze@gmail.com"));
+            repositoryChannel.saveAndFlush(new NotificationChannels("secondary floppa mail", "mail", "thomas0bellon@gmail.com"));
+        }
+
         if(repositoryUsers.findAll().isEmpty()) {
             repositoryUsers.saveAndFlush(new Users("John Doe", "motDePasse", "john@caramail.fr"));
             repositoryUsers.saveAndFlush(new Users("Jane Doe", "motDePasse", "jane@caramail.fr"));
@@ -52,6 +62,7 @@ class Initializer {
 
             Users tmp = usersService.findByName("Floppa");
             tmp.setNotifications(notificationService.findAll());
+            tmp.setNotificationChannels(channelService.findAll());
             usersService.saveAndFlush(tmp);
         }
     }
